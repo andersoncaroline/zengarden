@@ -1,0 +1,41 @@
+@use "./variables";
+@import "./variables";
+@import "./atoms/footer";
+@import "./atoms/header";
+@import "./atoms/links";
+@import "./atoms/lists";
+@import "./atoms/paragraphs";
+
+@mixin flex-container() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+body{
+    background-color: $background-color;
+    font-family: $font-family-serif;
+}
+
+.colors {
+    .swatch.primary {
+      background-color: $background-color;
+    }
+  
+    .swatch.accent1 {
+      background-color: $title-color;
+    }
+  
+    .swatch.accent2 {
+      background-color: $link-hover-color;
+    }
+  
+    .swatch.text-dark {
+      background-color: $text-color;
+    }
+  }
+  
