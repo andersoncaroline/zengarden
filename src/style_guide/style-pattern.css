@@ -3,23 +3,23 @@
 @import url("https://fonts.cdnfonts.com/css/droid-serif-2");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&display=swap");
 @import url("https://fonts.cdnfonts.com/css/droid-serif-2");
-a:link {
+footer a:link {
   text-decoration: none;
   color: #333;
   font-family: "Droid Serif", sans-serif;
   font-weight: bold;
 }
-a:visited {
+footer a:visited {
   color: #B66754;
 }
-a:active {
+footer a:active {
   color: #DB93A6;
 }
-a:hover {
+footer a:hover {
   color: #AA4050;
 }
 
-h1 {
+header h1 {
   font-family: "Dancing Script", cursive;
   color: #612F19;
 }
