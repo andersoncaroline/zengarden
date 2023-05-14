@@ -1,6 +1,19 @@
-header{
-    h1{
-        font-family: $font-family-serif;
-        @include links ($title-color);
-    }
+h1{
+    font-family: $font-family-serif;
+    font-size: $size-h1;
+    @include links ($title-color);
+    font-weight: 1000;
+}
+h2{
+    font-size: $size-h2; 
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+h3{
+    font-size: $size-h3; 
+}
+h3{
+    font-size: $size-h4; 
 }
