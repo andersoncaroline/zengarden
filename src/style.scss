@@ -1,0 +1,11 @@
+@import "./variables/variables";
+@import "./atoms/header";
+@import "./atoms/links";
+@import "./atoms/paragraphs";
+@import "./atoms/footer";
+@import "./atoms/lists";
+
+body{
+    background-color: $background-color;
+}
+
