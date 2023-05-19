@@ -4,6 +4,32 @@
 @import "./atoms/paragraphs";
 @import "./atoms/footer";
 @import "./atoms/lists";
+//set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+
+// breakpoint mixin
+@mixin breakpoint($break) {
+    @if $break==small {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+
+    @else if $break==medium {
+        @media (min-width: $break-medium) and (max-width:$break-large) {
+            @content;
+        }
+    }
+
+    @else if $break==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+}
 
 body{
     background-color: $background-color;
