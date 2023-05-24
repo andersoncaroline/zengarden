@@ -46,6 +46,9 @@ p {
   color: #333;
 }
 
+footer {
+  border: 1px solid #333;
+}
 footer a:link {
   text-decoration: none;
   color: #333;
@@ -63,6 +66,10 @@ footer a:hover {
 }
 
 li {
+  list-style-type: none;
+}
+
+abbr {
   text-decoration: none;
 }
 
@@ -75,16 +82,19 @@ body {
 
 .summary a {
   font-weight: bolder;
-  text-decoration: solid;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
   text-transform: uppercase;
 }
 
-.sidebar {
-  display: grid;
-  grid-template-columns: 3fr 12fr 5fr;
-  grid-gap: 10px 50px;
-  max-width: 1000px;
-  margin: 200px auto;
+.design-selection {
+  text-align: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+.design-archives {
+  text-align: center;
+}
+
+.zen-resources {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

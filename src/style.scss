@@ -4,22 +4,23 @@
 @import "./atoms/paragraphs";
 @import "./atoms/footer";
 @import "./atoms/lists";
+@import "./atoms/abbreviations";
 //set breakpoint sizes
-$break-small: 20em;
-$break-medium: 31em;
-$break-large: 60em;
+$break-small: 600px;
+$break-medium: 601px;
+$break-large: 801px;
 
 
 // breakpoint mixin
 @mixin breakpoint($break) {
     @if $break==small {
-        @media (min-width: $break-medium) {
+        @media (min-width: $break-small) {
             @content;
         }
     }
 
     @else if $break==medium {
-        @media (min-width: $break-medium) and (max-width:$break-large) {
+        @media (min-width: $break-medium) and (max-width:800px) {
             @content;
         }
     }
@@ -42,10 +43,21 @@ body{
     text-decoration: solid;
     text-transform: uppercase;
 }
-.sidebar{
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-gap: 10px;
-    
+.design-selection {
+    text-align: center;
+}
+.design-archives{
+    text-align: center;
+}
+.zen-resources{
+    text-align: center;
 }
 
+
+@media((min-width: $break-medium) and (max-width: 800px)){
+
+}
+
+@media (min-width: $break-large){
+
+}
