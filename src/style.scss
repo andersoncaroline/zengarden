@@ -33,5 +33,20 @@ $break-large: 60em;
 
 body{
     background-color: $background-color;
+    text-align: center;
+    margin:$marg;
+    padding:$pad;
+}
+ .summary a{
+    font-weight: bolder;
+    text-decoration: solid;
+    text-transform: uppercase;
+}
+.sidebar{
+    display: grid;
+    grid-template-columns: 3fr 12fr 5fr;
+    grid-gap: 10px 50px;
+    max-width: 1000px;
+    margin: 200px auto;
 }
 

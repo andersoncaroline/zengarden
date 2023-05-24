@@ -68,4 +68,23 @@ li {
 
 body {
   background-color: #F5D5DA;
-}/*# sourceMappingURL=style.css.map */
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.summary a {
+  font-weight: bolder;
+  text-decoration: solid;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 3fr 12fr 5fr;
+  grid-gap: 10px 50px;
+  max-width: 1000px;
+  margin: 200px auto;
+}
+
+/*# sourceMappingURL=style.css.map */
