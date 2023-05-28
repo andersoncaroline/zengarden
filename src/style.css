@@ -82,8 +82,7 @@ body {
 
 .summary a {
   font-weight: bolder;
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
+  text-decoration: solid;
   text-transform: uppercase;
 }
 
@@ -97,4 +96,33 @@ body {
 
 .zen-resources {
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (min-width: 801px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 7fr 13fr 6fr;
+    justify-content: center;
+    grid-gap: 15px 15px;
+    max-width: 1000px;
+    margin: 100px auto;
+    margin-top: 0;
+  }
+  .page-wrapper p {
+    text-align: center;
+    padding: 5px;
+  }
+  .sidebar {
+    padding: 0;
+    align-content: center;
+    padding-right: 5px;
+  }
+  .benefits {
+    grid-column: 1/2;
+  }
+  footer {
+    grid-column: 2/4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

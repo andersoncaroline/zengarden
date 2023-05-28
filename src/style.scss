@@ -54,10 +54,36 @@ body{
 }
 
 
-@media((min-width: $break-medium) and (max-width: 800px)){
+@include breakpoint(large) {
 
+.page-wrapper{
+    display: grid;
+    grid-template-columns: 7fr 13fr 6fr;
+    justify-content: center;
+    grid-gap: 15px 15px;
+    max-width: 1000px;
+    margin: 100px auto;
+    margin-top: 0;
+  }
+  .page-wrapper p{
+    text-align: center;
+    padding: 5px;
+  }
+
+  .sidebar{
+    padding: 0;
+    align-content: center;
+    padding-right: 5px;
+  }
+  
+.benefits{
+  grid-column: 1/2;
 }
 
-@media (min-width: $break-large){
+footer{
+  grid-column:2/4 ;
+}
+
+
 
 }
