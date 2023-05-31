@@ -55,12 +55,17 @@ body{
 
 
 @include breakpoint(large) {
-
-.page-wrapper{
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main{
     display: grid;
-    grid-template-columns: 7fr 13fr 6fr;
+    grid-template-columns: 250px 250px 6fr;
+    grid-template-rows: auto;
     justify-content: center;
-    grid-gap: 15px 15px;
+    grid-gap: 15px;
     max-width: 1000px;
     margin: 100px auto;
     margin-top: 0;
@@ -78,11 +83,25 @@ body{
   
 .benefits{
   grid-column: 1/2;
+  grid-row:1/span 3 ;
+}
+.requirements{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .participation{
+    grid-column: 2/3;
+    grid-row: 1/ span 3;
+  }
+footer{
+  grid-column:1/4 ;
+}
+.aside{
+    display: flex;
+    justify-content: space-between;
 }
 
-footer{
-  grid-column:2/4 ;
-}
+
 
 
 
