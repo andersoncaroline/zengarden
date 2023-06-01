@@ -111,13 +111,20 @@ body {
   }
   .intro {
     display: grid;
-    grid-template-columns: 600px 300px 400px;
+    grid-template-columns: 500px 300px 500px;
     justify-content: center;
     grid-gap: 15px;
-    margin: 50px;
     max-width: 100%;
     margin-right: 100px;
+    margin-bottom: 50px;
     margin-top: 0;
+    margin-left: 0;
+  }
+  .intro header {
+    margin-top: 30px;
+    margin-left: 0;
+    border-top: 2px solid #AA4050;
+    border-bottom: 2px solid #AA4050;
   }
   .wrapper {
     display: grid;
