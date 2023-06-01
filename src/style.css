@@ -111,11 +111,11 @@ body {
   }
   .intro {
     display: grid;
-    grid-template-columns: 300px 200px 6fr;
+    grid-template-columns: 600px 300px 400px;
     justify-content: center;
     grid-gap: 15px;
-    max-width: 1000px;
-    margin: 100px;
+    margin: 50px;
+    max-width: 100%;
     margin-right: 100px;
     margin-top: 0;
   }
@@ -125,6 +125,7 @@ body {
   }
   .summary {
     margin-top: 70px;
+    margin-left: 0;
   }
   .page-wrapper p {
     display: block;
