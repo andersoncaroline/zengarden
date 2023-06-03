@@ -1,4 +1,6 @@
 a{
+    transition: transform 0.3s;
+
     &:link{
         text-decoration: none;
         @include links($link-color);
@@ -12,5 +14,6 @@ a{
     }
     &:hover{
         @include links($link-hover-color);
+        transform: translateY(-10px);
     }
 }

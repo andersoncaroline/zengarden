@@ -26,6 +26,9 @@ h3 {
   font-size: 25px;
 }
 
+a {
+  transition: transform 0.3s;
+}
 a:link {
   text-decoration: none;
   color: #333;
@@ -39,6 +42,7 @@ a:active {
 }
 a:hover {
   color: #AA4050;
+  transform: translateY(-10px);
 }
 
 p {
@@ -71,6 +75,7 @@ li {
 
 abbr {
   text-decoration: none;
+  font-weight: bold;
 }
 
 body {
@@ -84,6 +89,12 @@ body {
   font-weight: bolder;
   text-decoration: solid;
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.summary a:hover {
+  transform: translateY(-10px);
+  color: #AA4050;
 }
 
 .design-selection {
@@ -106,7 +117,8 @@ body {
     grid-gap: 15px;
     max-width: 1000px;
     margin: 100px;
-    margin-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 0;
   }
   .intro {
@@ -115,10 +127,10 @@ body {
     justify-content: center;
     grid-gap: 15px;
     max-width: 100%;
-    margin-right: 100px;
+    margin-right: auto;
     margin-bottom: 50px;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: auto;
   }
   .intro header {
     margin-top: 30px;
@@ -132,7 +144,6 @@ body {
   }
   .summary {
     margin-top: 70px;
-    margin-left: 0;
   }
   .page-wrapper p {
     display: block;

@@ -42,7 +42,9 @@ body{
     font-weight: bolder;
     text-decoration: solid;
     text-transform: uppercase;
+    transition: all 0.3s;
 }
+
 .design-selection {
     text-align: center;
 }
@@ -62,7 +64,8 @@ body{
     grid-gap: 15px;
     max-width: 1000px;
     margin: 100px;
-    margin-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 0;
   }
   .intro{
@@ -71,10 +74,10 @@ body{
     justify-content: center;
     grid-gap: 15px;
     max-width: 100%;
-    margin-right: 100px;
+    margin-right: auto;
     margin-bottom: 50px;
     margin-top: 0;
-    margin-left: 0;
+    margin-left:auto;
   }
 
   .intro header{
@@ -82,14 +85,15 @@ body{
     margin-left: 0;
     border-top:2px solid  $link-hover-color;
     border-bottom:2px solid  $link-hover-color;
+
   }
+
   .wrapper{
     display: grid;
     grid-column: 4/5;
   }
   .summary{
     margin-top: 70px;
-    margin-left: 0;
   }
   .page-wrapper p{
     display:block;
