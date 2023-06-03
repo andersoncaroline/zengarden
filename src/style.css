@@ -79,7 +79,7 @@ abbr {
 }
 
 body {
-  background-color: #F5D5DA;
+  background-image: url("https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
   text-align: center;
   margin: 10px;
   padding: 10px;
@@ -87,7 +87,8 @@ body {
 
 .summary a {
   font-weight: bolder;
-  text-decoration: solid;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
   text-transform: uppercase;
   transition: all 0.3s;
 }
@@ -165,6 +166,4 @@ body {
   footer {
     grid-column: 1/4;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
