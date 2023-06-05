@@ -81,6 +81,20 @@ body{
     margin-bottom: 50px;
     margin-top: 0;
     margin-left:auto;
+    border-bottom:2px solid  $link-hover-color;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-bottom: 100px;
+    animation: move linear 5s infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation:move linear 5s infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation:move linear 5s infinite;
+    -moz-transform-origin: 50% 50%;
+    -ms-zoom-animation: move linear 5s infinite;
+    -ms-zoom-transform-origin: 50% 50%;
+    -o-animation: move linear 5s infinite;
+    -o-transform-origin: 50% 50%;
   }
 
   .intro header{
@@ -88,10 +102,7 @@ body{
     margin-top: 30px;
     margin-left: 0;
     border-top:2px solid  $link-hover-color;
-    border-bottom:2px solid  $link-hover-color;
-    padding-bottom: 100px;
-    animation: move linear 4s infinite;
-
+    border-top-left-radius: 60px;
   }
   @keyframes move{
     0% {
