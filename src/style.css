@@ -130,10 +130,30 @@ body {
     margin-left: auto;
   }
   .intro header {
+    padding: 0;
     margin-top: 30px;
     margin-left: 0;
     border-top: 2px solid #AA4050;
     border-bottom: 2px solid #AA4050;
+    padding-bottom: 100px;
+    animation: move linear 4s infinite;
+  }
+  @keyframes move {
+    0% {
+      padding-bottom: 100px;
+    }
+    24% {
+      padding-bottom: 80px;
+    }
+    50% {
+      padding-bottom: 60px;
+    }
+    74% {
+      padding-bottom: 80px;
+    }
+    100% {
+      padding-bottom: 100px;
+    }
   }
   .wrapper {
     display: grid;
