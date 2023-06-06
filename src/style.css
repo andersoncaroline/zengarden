@@ -27,7 +27,7 @@ h3 {
 }
 
 a {
-  transition: transform 0.3s;
+  display: inline-block;
 }
 a:link {
   text-decoration: none;
@@ -42,7 +42,33 @@ a:active {
 }
 a:hover {
   color: #AA4050;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  border-bottom: 2px solid #333;
+  border-radius: 60px;
+  animation: bounce linear 3 infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 p {
@@ -104,6 +130,41 @@ body {
 
 .zen-resources {
   text-align: center;
+}
+
+.intro header {
+  padding: 0;
+  margin-top: 30px;
+  margin-left: 0;
+  border-top: 2px solid #AA4050;
+  border-bottom: 2px solid #AA4050;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  animation: bounce linear 4s 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 801px) {
