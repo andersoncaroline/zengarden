@@ -2,13 +2,13 @@ a{
     display: inline-block;
     transition: all 0.3s;
     font-display: fallback;
-    animation: rainbow linear infinite;
+    
 
     &:link{
         text-decoration: none;
         @include links($link-color);
         font-family: $font-family-droid-sans-serif;
-        
+        animation: move linear 2s infinite;
     }
     &:visited{
         @include links($link-visited-color);
@@ -18,8 +18,37 @@ a{
     }
     &:hover{
         @include links($link-hover-color);
-        transform: translateY(-5px);
+        animation: none;
+        transform: translate(-5px ,5px);
         border-bottom:2px solid $link-color;
         border-radius: 50px;
     }
 }
+@keyframes move{
+    0% {
+     transform: translateY(0);
+     color: $title-color
+    }
+    20%{
+      transform: translateY(0);
+      color:$link-visited-color
+    }
+    40%{
+      transform: translateY(-5px);
+    }
+    50%{
+      transform: translateY(0);
+      color: $link-active-color
+    }
+    60%{
+      transform: translateY(-2.5px);
+    }
+    80%{
+      transform: translateY(0);
+      color:$link-color;
+    }
+    100%{
+      transform: translateY(0);
+      color: $title-color;
+    }
+  }

@@ -30,12 +30,12 @@ a {
   display: inline-block;
   transition: all 0.3s;
   font-display: fallback;
-  animation: rainbow, linear infinite;
 }
 a:link {
   text-decoration: none;
   color: #333;
   font-family: "Droid Serif", sans-serif;
+  animation: move linear 2s infinite;
 }
 a:visited {
   color: #B66754;
@@ -45,25 +45,37 @@ a:active {
 }
 a:hover {
   color: #AA4050;
-  transform: translateY(-5px);
+  animation: none;
+  transform: translate(-5px, 5px);
   border-bottom: 2px solid #333;
   border-radius: 50px;
 }
 
-@keyframes rainbow {
+@keyframes move {
   0% {
+    transform: translateY(0);
     color: #612F19;
   }
-  25% {
+  20% {
+    transform: translateY(0);
     color: #B66754;
   }
+  40% {
+    transform: translateY(-5px);
+  }
   50% {
+    transform: translateY(0);
     color: #DB93A6;
   }
-  75% {
+  60% {
+    transform: translateY(-2.5px);
+  }
+  80% {
+    transform: translateY(0);
     color: #333;
   }
   100% {
+    transform: translateY(0);
     color: #612F19;
   }
 }
@@ -116,6 +128,27 @@ body {
   transition: all 0.3s;
 }
 
+a {
+  animation: rainbow linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #612F19;
+  }
+  25% {
+    color: #B66754;
+  }
+  50% {
+    color: #DB93A6;
+  }
+  75% {
+    color: #333;
+  }
+  100% {
+    color: #612F19;
+  }
+}
 .design-selection {
   text-align: center;
 }
