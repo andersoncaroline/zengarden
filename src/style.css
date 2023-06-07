@@ -29,6 +29,8 @@ h3 {
 a {
   display: inline-block;
   transition: all 0.3s;
+  font-display: fallback;
+  animation: rainbow, linear infinite;
 }
 a:link {
   text-decoration: none;
@@ -48,6 +50,23 @@ a:hover {
   border-radius: 50px;
 }
 
+@keyframes rainbow {
+  0% {
+    color: #612F19;
+  }
+  25% {
+    color: #B66754;
+  }
+  50% {
+    color: #DB93A6;
+  }
+  75% {
+    color: #333;
+  }
+  100% {
+    color: #612F19;
+  }
+}
 p {
   font-family: "Droid Serif", sans-serif;
   color: #333;

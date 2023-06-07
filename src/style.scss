@@ -47,6 +47,29 @@ body{
     text-transform: uppercase;
     transition: all 0.3s;
 }
+a{
+  animation: rainbow linear infinite;
+}
+@keyframes rainbow {
+  0% {
+      color: $title-color
+  }
+
+  25% {
+      color:$link-visited-color
+  }
+
+  50% {
+      color: $link-active-color
+  }
+
+  75% {
+      color:$link-color;
+  }
+  100%{
+    color: $title-color;
+  }
+}
 
 .design-selection {
     text-align: center;

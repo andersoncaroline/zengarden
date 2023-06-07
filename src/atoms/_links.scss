@@ -1,11 +1,14 @@
 a{
     display: inline-block;
     transition: all 0.3s;
+    font-display: fallback;
+    animation: rainbow linear infinite;
 
     &:link{
         text-decoration: none;
         @include links($link-color);
         font-family: $font-family-droid-sans-serif;
+        
     }
     &:visited{
         @include links($link-visited-color);
