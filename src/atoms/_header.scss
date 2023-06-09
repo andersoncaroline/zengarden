@@ -18,6 +18,7 @@ h3{
     font-family: $font-family-serif;
     font-size: $size-h3; 
     @include links ($title-color);
+    
 }
 h3{
     font-size: $size-h4; 
