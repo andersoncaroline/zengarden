@@ -57,6 +57,43 @@ body{
 .zen-resources{
     text-align: center;
 }
+.intro header{
+  padding: 0;
+  margin-top: 30px;
+  margin-left: 0;
+  border-top:2px solid  $link-hover-color;
+  border-bottom:2px solid  $link-hover-color;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  animation: bounce linear 4s 2s infinite;
+
+}
+
+@keyframes bounce{
+  0% {
+   transform: translateY(0);
+  }
+  20%{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  60%{
+    transform: translateY(-15px);
+  }
+  80%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
 
 
 @include breakpoint(large) {   
@@ -81,14 +118,45 @@ body{
     margin-bottom: 50px;
     margin-top: 0;
     margin-left:auto;
+    border-bottom:2px solid  $link-hover-color;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-bottom: 100px;
+    animation: move linear 5s infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation:move linear 5s infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation:move linear 5s infinite;
+    -moz-transform-origin: 50% 50%;
+    -ms-zoom-animation: move linear 5s infinite;
+    -ms-zoom-transform-origin: 50% 50%;
+    -o-animation: move linear 5s infinite;
+    -o-transform-origin: 50% 50%;
   }
 
   .intro header{
+    padding: 0;
     margin-top: 30px;
     margin-left: 0;
     border-top:2px solid  $link-hover-color;
-    border-bottom:2px solid  $link-hover-color;
-
+    border-top-left-radius: 60px;
+  }
+  @keyframes move{
+    0% {
+     padding-bottom: 100px;
+    }
+    24%{
+      padding-bottom: 80px;
+    }
+    50%{
+      padding-bottom: 60px;
+    }
+    74%{
+      padding-bottom: 80px;
+    }
+    100%{
+      padding-bottom: 100px;
+    }
   }
 
   .wrapper{
@@ -112,6 +180,10 @@ body{
   margin-top: 200%;
   grid-column: 1/2;
   grid-row:1/span 3 ;
+}
+.benefits p{
+  //changes the paragraph color to plain black because of the branch in the large view.
+  color:black;
 }
 .requirements{
     grid-column: 3/4;
