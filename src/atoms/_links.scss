@@ -1,6 +1,8 @@
 a{
     display: inline-block;
     transition: all 0.3s;
+    animation: upAnddown 1s ease-in ;
+
 
     &:link{
         text-decoration: none;
@@ -15,8 +17,10 @@ a{
     }
     &:hover{
         @include links($link-hover-color);
-        transform: translateY(-5px);
+        transform: translateY(-6px);
+        border-top:2px solid $link-color;
         border-bottom:2px solid $link-color;
         border-radius: 50px;
     }
 }
+

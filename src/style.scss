@@ -48,13 +48,10 @@ body{
     text-transform: uppercase;
     transition: all 0.3s;
 }
-<<<<<<< HEAD
 a{
   animation: rainbow linear infinite;
 }
 
-=======
->>>>>>> 59934d9a5bd4c93ff4c33f1f5ae363a35b72d39f
 
 .design-selection {
     text-align: center;
@@ -66,7 +63,7 @@ a{
     text-align: center;
 }
 .intro header{
-  padding: 0;
+  padding: 50px;
   margin-top: 30px;
   margin-left: 0;
   border-top:2px solid  $link-hover-color;
@@ -74,7 +71,63 @@ a{
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   animation: bounce linear 4s 2s infinite;
+  
+}
+@keyframes slideInLeft{
+  from {
+    transform: translateX(-300px);
+  }
+  to{
+    transform:translateX(0);
+  }
+}
+@keyframes upAnddown{
+  0% {
+   transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+   }
+  40%{
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(0); 
+  }
+  60%{
+    transform: translateY(-2.5px); 
+  }
+  80%{
+    transform: translateY(0); 
+  }
+  100%{
+    transform: translateY(0); 
+  }
+}
 
+
+@keyframes bounce{
+  0% {
+   transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+   }
+  40%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(0); 
+  }
+  60%{
+    transform: translateY(-15px); 
+  }
+  80%{
+    transform: translateY(0); 
+  }
+  100%{
+    transform: translateY(0); 
+  }
 }
 h3{
   background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
@@ -127,13 +180,6 @@ h3{
     -o-transform-origin: 50% 50%;
   }
 
-  .intro header{
-    padding: 0;
-    margin-top: 30px;
-    margin-left: 0;
-    border-top:2px solid  $link-hover-color;
-    border-top-left-radius: 60px;
-  }
   @keyframes move{
     0% {
      padding-bottom: 100px;

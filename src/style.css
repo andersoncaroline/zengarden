@@ -5,6 +5,7 @@ h1 {
   font-size: 50px;
   color: #612F19;
   font-weight: 1000;
+  animation: slideInLeft 1s ease-in;
 }
 
 h2 {
@@ -14,12 +15,14 @@ h2 {
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1em;
+  animation: slideInLeft 1s ease-in;
 }
 
 h3 {
   font-family: "Dancing Script", cursive;
   font-size: 30px;
   color: #612F19;
+  animation: slideInLeft 1s ease-in;
 }
 
 h3 {
@@ -29,6 +32,7 @@ h3 {
 a {
   display: inline-block;
   transition: all 0.3s;
+  animation: upAnddown 1s ease-in;
 }
 a:link {
   text-decoration: none;
@@ -43,11 +47,35 @@ a:active {
 }
 a:hover {
   color: #AA4050;
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   border-radius: 50px;
 }
 
+@keyframes upAnddown {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-2.5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 p {
   font-family: "Droid Serif", sans-serif;
   color: #333;
@@ -93,10 +121,13 @@ body {
 
 .summary a {
   font-weight: bolder;
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
+  text-decoration: solid;
   text-transform: uppercase;
   transition: all 0.3s;
+}
+
+a {
+  animation: rainbow linear infinite;
 }
 
 .design-selection {
@@ -112,7 +143,7 @@ body {
 }
 
 .intro header {
-  padding: 0;
+  padding: 50px;
   margin-top: 30px;
   margin-left: 0;
   border-top: 2px solid #AA4050;
@@ -122,14 +153,37 @@ body {
   animation: bounce linear 4s 2s infinite;
 }
 
-h3 {
-  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
-  background-repeat: no-repeat;
-  background-position: auto;
-  background-size: contain;
-  padding-left: 0%;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-
+@keyframes upAnddown {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-2.5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -153,6 +207,14 @@ h3 {
     transform: translateY(0);
   }
 }
+h3 {
+  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: contain;
+  padding-left: 0%;
+}
+
 @media (min-width: 801px) {
   .main, .wrapper {
     display: grid;
@@ -189,13 +251,6 @@ h3 {
     -ms-zoom-transform-origin: 50% 50%;
     -o-animation: move linear 5s infinite;
     -o-transform-origin: 50% 50%;
-  }
-  .intro header {
-    padding: 0;
-    margin-top: 30px;
-    margin-left: 0;
-    border-top: 2px solid #AA4050;
-    border-top-left-radius: 60px;
   }
   @keyframes move {
     0% {
@@ -249,4 +304,6 @@ h3 {
   footer {
     grid-column: 1/4;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ h1{
     font-size: $size-h1;
     @include links ($title-color);
     font-weight: 1000;
+    animation: slideInLeft 1s ease-in ;
 }
 
 h2{
@@ -12,13 +13,14 @@ h2{
     font-weight: 900;
     letter-spacing: 1px;
     line-height: 1em;
+    animation: slideInLeft 1s ease-in;
 }
 
 h3{
     font-family: $font-family-serif;
     font-size: $size-h3; 
     @include links ($title-color);
-    
+    animation: slideInLeft 1s ease-in;
 }
 h3{
     font-size: $size-h4; 
