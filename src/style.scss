@@ -34,9 +34,10 @@ $break-large: 801px;
 
 body{
     //background-color: $background-color;
-    background-image: url("https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.85;
     text-align: center;
     margin:$marg;
     padding:$pad;
@@ -47,10 +48,13 @@ body{
     text-transform: uppercase;
     transition: all 0.3s;
 }
+<<<<<<< HEAD
 a{
   animation: rainbow linear infinite;
 }
 
+=======
+>>>>>>> 59934d9a5bd4c93ff4c33f1f5ae363a35b72d39f
 
 .design-selection {
     text-align: center;
@@ -71,6 +75,13 @@ a{
   border-bottom-right-radius: 60px;
   animation: bounce linear 4s 2s infinite;
 
+}
+h3{
+  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: contain;
+  padding-left: 0%;
 }
 
 
@@ -178,8 +189,5 @@ a{
 footer{
   grid-column:1/4 ;
 }
-
-
-
 
 }

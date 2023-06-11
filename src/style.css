@@ -29,13 +29,11 @@ h3 {
 a {
   display: inline-block;
   transition: all 0.3s;
-  font-display: fallback;
 }
 a:link {
   text-decoration: none;
   color: #333;
   font-family: "Droid Serif", sans-serif;
-  animation: move linear 2s infinite;
 }
 a:visited {
   color: #B66754;
@@ -45,40 +43,11 @@ a:active {
 }
 a:hover {
   color: #AA4050;
-  animation: none;
-  transform: translate(-5px, 5px);
+  transform: translateY(-5px);
   border-bottom: 2px solid #333;
   border-radius: 50px;
 }
 
-@keyframes move {
-  0% {
-    transform: translateY(0);
-    color: #612F19;
-  }
-  20% {
-    transform: translateY(0);
-    color: #B66754;
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(0);
-    color: #DB93A6;
-  }
-  60% {
-    transform: translateY(-2.5px);
-  }
-  80% {
-    transform: translateY(0);
-    color: #333;
-  }
-  100% {
-    transform: translateY(0);
-    color: #612F19;
-  }
-}
 p {
   font-family: "Droid Serif", sans-serif;
   color: #333;
@@ -113,9 +82,10 @@ abbr {
 }
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.85;
   text-align: center;
   margin: 10px;
   padding: 10px;
@@ -123,32 +93,12 @@ body {
 
 .summary a {
   font-weight: bolder;
-  text-decoration: solid;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
   text-transform: uppercase;
   transition: all 0.3s;
 }
 
-a {
-  animation: rainbow linear infinite;
-}
-
-@keyframes rainbow {
-  0% {
-    color: #612F19;
-  }
-  25% {
-    color: #B66754;
-  }
-  50% {
-    color: #DB93A6;
-  }
-  75% {
-    color: #333;
-  }
-  100% {
-    color: #612F19;
-  }
-}
 .design-selection {
   text-align: center;
 }
@@ -170,6 +120,14 @@ a {
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   animation: bounce linear 4s 2s infinite;
+}
+
+h3 {
+  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: contain;
+  padding-left: 0%;
 }
 
 @keyframes bounce {
@@ -291,6 +249,4 @@ a {
   footer {
     grid-column: 1/4;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
