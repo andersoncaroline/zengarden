@@ -50,26 +50,7 @@ body{
 a{
   animation: rainbow linear infinite;
 }
-@keyframes rainbow {
-  0% {
-      color: $title-color
-  }
 
-  25% {
-      color:$link-visited-color
-  }
-
-  50% {
-      color: $link-active-color
-  }
-
-  75% {
-      color:$link-color;
-  }
-  100%{
-    color: $title-color;
-  }
-}
 
 .design-selection {
     text-align: center;
@@ -92,29 +73,7 @@ a{
 
 }
 
-@keyframes bounce{
-  0% {
-   transform: translateY(0);
-  }
-  20%{
-    transform: translateY(0);
-  }
-  40%{
-    transform: translateY(-30px);
-  }
-  50%{
-    transform: translateY(0);
-  }
-  60%{
-    transform: translateY(-15px);
-  }
-  80%{
-    transform: translateY(0);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
+
 
 
 
