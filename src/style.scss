@@ -49,7 +49,7 @@ body{
     transition: all 0.3s;
 }
 a{
-  animation: rainbow linear infinite;
+  animation: upAnddown ease-in-out 3s infinite;
 }
 
 
@@ -81,6 +81,7 @@ a{
     transform:translateX(0);
   }
 }
+
 @keyframes upAnddown{
   0% {
    transform: translateY(0);
@@ -89,13 +90,13 @@ a{
     transform: translateY(0);
    }
   40%{
-    transform: translateY(-5px);
+    transform: translateY(-6px);
   }
   50%{
     transform: translateY(0); 
   }
   60%{
-    transform: translateY(-2.5px); 
+    transform: translateY(-3px); 
   }
   80%{
     transform: translateY(0); 
@@ -136,6 +137,13 @@ h3{
   background-size: contain;
   padding-left: 0%;
 }
+.wrapper a{
+  animation: none;
+}
+footer a{
+  animation: slideInLeft 1s ease-in ;
+  padding: 10px;
+}
 
 
 
@@ -143,7 +151,7 @@ h3{
 
 
 @include breakpoint(large) {   
-.main, .wrapper{
+.main{
     display: grid;
     grid-template-columns: 300px 300px 6fr;
     justify-content: center;
@@ -153,6 +161,27 @@ h3{
     margin-right: auto;
     margin-left: auto;
     margin-top: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 500px 300px 500px;
+    justify-content: center;
+    grid-gap: 15px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 0;
+    margin-left:auto;
+    border-top:2px solid  $link-hover-color;
+    border-bottom:2px solid  $link-hover-color;
+    padding: 50px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    animation: bounce linear 4s 2s infinite;
+  }
+  .wrapper a{
+    animation: none;
   }
   .intro{
     display: grid;
@@ -168,16 +197,16 @@ h3{
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     padding-bottom: 100px;
-    animation: move linear 5s infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation:move linear 5s infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation:move linear 5s infinite;
-    -moz-transform-origin: 50% 50%;
-    -ms-zoom-animation: move linear 5s infinite;
-    -ms-zoom-transform-origin: 50% 50%;
-    -o-animation: move linear 5s infinite;
-    -o-transform-origin: 50% 50%;
+    //animation: move linear 5s infinite;
+    //transform-origin: 50% 50%;
+    //-webkit-animation:move linear 5s infinite;
+    //-webkit-transform-origin: 50% 50%;
+    //-moz-animation:move linear 5s infinite;
+    //-moz-transform-origin: 50% 50%;
+    //-ms-zoom-animation: move linear 5s infinite;
+    //-ms-zoom-transform-origin: 50% 50%;
+    //-o-animation: move linear 5s infinite;
+    //-o-transform-origin: 50% 50%;
   }
 
   @keyframes move{
@@ -235,5 +264,8 @@ h3{
 footer{
   grid-column:1/4 ;
 }
-
+footer a{
+  animation: slideInLeft 1s ease-in ;
+  padding: 10px;
+}
 }

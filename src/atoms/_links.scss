@@ -1,13 +1,13 @@
 a{
     display: inline-block;
     transition: all 0.3s;
-    animation: upAnddown 1s ease-in ;
 
 
     &:link{
         text-decoration: none;
         @include links($link-color);
         font-family: $font-family-droid-sans-serif;
+        
     }
     &:visited{
         @include links($link-visited-color);
@@ -17,10 +17,11 @@ a{
     }
     &:hover{
         @include links($link-hover-color);
-        transform: translateY(-6px);
+        transform: translateY(-5px);
         border-top:2px solid $link-color;
         border-bottom:2px solid $link-color;
         border-radius: 50px;
+        animation: none;
     }
 }
 
