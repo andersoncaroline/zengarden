@@ -87,9 +87,8 @@ abbr {
 }
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(255, 185, 196);
+  background: linear-gradient(90deg, rgb(255, 185, 196) 0%, rgb(255, 225, 236) 50%, rgb(255, 185, 196) 100%);
   opacity: 0.85;
   text-align: center;
   margin: 10px;
@@ -98,13 +97,14 @@ body {
 
 .summary a {
   font-weight: bolder;
-  text-decoration: solid;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
   text-transform: uppercase;
   transition: all 0.3s;
 }
 
 a {
-  animation: upAnddown ease-in-out 3s infinite;
+  animation: upAnddown ease-in-out 3s ease;
 }
 
 .design-selection {
@@ -127,7 +127,7 @@ a {
   border-bottom: 2px solid #AA4050;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
-  animation: bounce linear 4s 2s infinite;
+  animation: bounce linear 4s 2s ease-in;
 }
 
 @keyframes slideInLeft {
@@ -185,10 +185,11 @@ a {
   }
 }
 h3 {
-  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
   background-repeat: no-repeat;
   background-position: auto;
-  background-size: contain;
+  border-radius: 7px;
+  background-size: cover;
   padding-left: 0%;
 }
 
@@ -205,7 +206,7 @@ footer a {
   .main {
     display: grid;
     grid-template-columns: 300px 300px 6fr;
-    justify-content: center;
+    justify-content: space-around;
     grid-gap: 15px;
     max-width: 1000px;
     margin: 100px;
@@ -235,7 +236,7 @@ footer a {
   }
   .intro {
     display: grid;
-    grid-template-columns: 500px 300px 500px;
+    grid-template-areas: "header-intro header-intro " ". . " "summary preamble";
     justify-content: center;
     grid-gap: 15px;
     max-width: 100%;
@@ -247,6 +248,9 @@ footer a {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     padding-bottom: 100px;
+  }
+  header {
+    grid-area: header-intro;
   }
   @keyframes move {
     0% {
@@ -267,6 +271,10 @@ footer a {
   }
   .summary {
     margin-top: 70px;
+    grid-area: summary;
+  }
+  .preamble {
+    grid-area: preamble;
   }
   .page-wrapper p {
     display: block;
@@ -279,17 +287,22 @@ footer a {
   }
   .benefits {
     position: absolute;
+    margin: 300px 0 0 0;
     left: 150px;
     right: auto;
     top: 1250px;
     width: 500px;
     height: 200px;
-    background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
-    background-size: cover;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgb(255, 185, 196) 0%, rgb(255, 224, 235) 86%);
     padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #DB93A6;
+    border-width: 1px;
   }
   .benefits p {
-    color: black;
+    color: #333;
   }
   .requirements {
     grid-column: 3/4;
@@ -300,23 +313,28 @@ footer a {
     grid-row: 1/span 3;
   }
   .sidebar {
-    display: block;
-    background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
-    background-size: cover;
-    padding: 50px;
+    display: flex;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgb(255, 185, 196) 0%, rgb(255, 224, 235) 86%);
+    padding: 45px;
     position: absolute;
     left: 1000px;
     right: auto;
-    top: 700px;
+    top: 800px;
     margin-left: 270px;
     width: 180px;
     height: 1200px;
     border: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #DB93A6;
+    border-width: 1px;
   }
   .wrapper li a {
     padding: 5px;
   }
   footer {
+    margin: 200px 50px 50px -150px;
     border: none;
     position: absolute;
     left: 910px;
@@ -325,10 +343,12 @@ footer a {
     width: 300px;
     height: 120px;
     display: block;
-    background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
-    background-size: cover;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgb(255, 185, 196) 0%, rgb(255, 224, 235) 86%);
     padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #DB93A6;
+    border-width: 1px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
