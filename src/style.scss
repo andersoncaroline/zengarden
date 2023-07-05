@@ -10,149 +10,211 @@ $break-small: 600px;
 $break-medium: 601px;
 $break-large: 801px;
 
-
 // breakpoint mixin
 @mixin breakpoint($break) {
-    @if $break==small {
-        @media (min-width: $break-small) {
-            @content;
-        }
+  @if $break==small {
+    @media (min-width: $break-small) {
+      @content;
     }
-
-    @else if $break==medium {
-        @media (min-width: $break-medium) and (max-width:800px) {
-            @content;
-        }
+  } @else if $break==medium {
+    @media (min-width: $break-medium) and (max-width: 800px) {
+      @content;
     }
-
-    @else if $break==large {
-        @media (min-width: $break-large) {
-            @content;
-        }
+  } @else if $break==large {
+    @media (min-width: $break-large) {
+      @content;
     }
+  }
 }
 
-body{
-    //background-color: $background-color;
-    background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.85;
-    text-align: center;
-    margin:$marg;
-    padding:$pad;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
- .summary a{
-    font-weight: bolder;
-    text-decoration: solid;
-    text-transform: uppercase;
-    transition: all 0.3s;
+div,
+article,
+section,
+header,
+footer,
+nav,
+figure,
+li {
+  position: relative;
 }
-a{
+div.page-wrapper {
+  z-index: 2;
+}
+div {
+  display: block;
+}
+
+body {
+  position: relative;
+  background-image: linear-gradient(
+    135deg,
+    $background-color,
+    $link-active-color,
+    $link-hover-color
+  );
+  //background-image: url("https://images.unsplash.com/photo-1656695243999-8798ec86b214?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 4s ease-in-out infinite;
+  background-size: 400% 200%;
+  text-align: center;
+}
+.summary a {
+  font-weight: bolder;
+  text-decoration: solid;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+a {
   animation: upAnddown ease-in-out 3s infinite;
 }
-
+.page-wrapper {
+  padding: 20px;
+  padding-top: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 .design-selection {
-    text-align: center;
+  text-align: center;
 }
-.design-archives{
-    text-align: center;
+.design-archives {
+  text-align: center;
 }
-.zen-resources{
-    text-align: center;
+.zen-resources {
+  text-align: center;
 }
-.intro header{
+section.intro {
+  position: relative;
+}
+header {
+  display: block;
+}
+.intro header {
   padding: 50px;
-  margin-top: 30px;
   margin-left: 0;
-  border-top:2px solid  $link-hover-color;
-  border-bottom:2px solid  $link-hover-color;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
-  animation: bounce linear 4s 2s infinite;
-  
+  //animation: bounce linear 4s 2s infinite;
 }
-@keyframes slideInLeft{
+.intro h1 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #ea2e49;
+  color: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+h2 {
+  display: block;
+  background-color: aqua;
+  position: relative;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 5em;
+ margin-top: 10%;
+}
+section.intro div.summary{
+  color: #fff;
+  padding: 5% 0;
+}
+@keyframes change {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+@keyframes slideInLeft {
   from {
     transform: translateX(-300px);
   }
-  to{
-    transform:translateX(0);
+  to {
+    transform: translateX(0);
   }
 }
 
-@keyframes upAnddown{
+@keyframes upAnddown {
   0% {
-   transform: translateY(0);
+    transform: translateY(0);
   }
   20% {
     transform: translateY(0);
-   }
-  40%{
+  }
+  40% {
     transform: translateY(-6px);
   }
-  50%{
-    transform: translateY(0); 
+  50% {
+    transform: translateY(0);
   }
-  60%{
-    transform: translateY(-3px); 
+  60% {
+    transform: translateY(-3px);
   }
-  80%{
-    transform: translateY(0); 
+  80% {
+    transform: translateY(0);
   }
-  100%{
-    transform: translateY(0); 
+  100% {
+    transform: translateY(0);
   }
 }
 
-
-@keyframes bounce{
+@keyframes bounce {
   0% {
-   transform: translateY(0);
+    transform: translateY(0);
   }
   20% {
     transform: translateY(0);
-   }
-  40%{
+  }
+  40% {
     transform: translateY(-30px);
   }
-  50%{
-    transform: translateY(0); 
+  50% {
+    transform: translateY(0);
   }
-  60%{
-    transform: translateY(-15px); 
+  60% {
+    transform: translateY(-15px);
   }
-  80%{
-    transform: translateY(0); 
+  80% {
+    transform: translateY(0);
   }
-  100%{
-    transform: translateY(0); 
+  100% {
+    transform: translateY(0);
   }
 }
-h3{
+h3 {
   background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
   background-repeat: no-repeat;
   background-position: auto;
   background-size: contain;
   padding-left: 0%;
 }
-.wrapper a{
+.wrapper a {
   animation: none;
 }
-footer a{
-  animation:none;
+footer a {
+  animation: none;
   padding: 10px;
 }
 
-
-
-
-
-
-@include breakpoint(large) {  
+/*@include breakpoint(large) { 
+  body{
+    max-width: 1200px;
+  margin: auto;
+  }
   
-.main{
+//.main{
     display: grid;
     grid-template-columns: 300px 300px 6fr;
     justify-content: center;
@@ -181,7 +243,7 @@ footer a{
     border-bottom-right-radius: 60px;
     animation: bounce linear 4s 2s infinite;
   }*/
-  .wrapper a{
+/*.wrapper a{
     animation: none;
   }
   .intro{
@@ -293,4 +355,4 @@ footer{
     background-size: cover;
     padding: 30px;
 }
-}
+}*/
