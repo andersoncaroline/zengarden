@@ -2,11 +2,11 @@ a{
     display: inline-block;
     transition: all 0.3s;
 
-
     &:link{
         text-decoration: none;
         @include links($link-color);
         font-family: $font-family-droid-sans-serif;
+        animation:upAnddown 
         
     }
     &:visited{
@@ -21,7 +21,7 @@ a{
         border-top:2px solid $link-color;
         border-bottom:2px solid $link-color;
         border-radius: 50px;
-        animation: none;
+        
     }
 }
 

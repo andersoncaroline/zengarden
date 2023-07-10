@@ -5,33 +5,308 @@
 @import "./atoms/footer";
 @import "./atoms/lists";
 @import "./atoms/abbreviations";
+
 //set breakpoint sizes
 $break-small: 600px;
 $break-medium: 601px;
 $break-large: 801px;
 
-
 // breakpoint mixin
 @mixin breakpoint($break) {
-    @if $break==small {
-        @media (min-width: $break-small) {
-            @content;
-        }
+  @if $break==small {
+    @media (min-width: $break-small) {
+      @content;
     }
-
-    @else if $break==medium {
-        @media (min-width: $break-medium) and (max-width:800px) {
-            @content;
-        }
+  } @else if $break==medium {
+    @media (min-width: $break-medium) and (max-width: 800px) {
+      @content;
     }
-
-    @else if $break==large {
-        @media (min-width: $break-large) {
-            @content;
-        }
+  } @else if $break==large {
+    @media (min-width: $break-large) {
+      @content;
     }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div, article, section, header, footer, nav, figure, li{
+  position: relative;
+}
+div{
+  display:block
 }
 
+body {
+  background: rgb(255, 185, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 225, 236, 1) 50%,
+    rgba(255, 185, 196, 1) 100%
+  );
+  padding: 5%;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.intro {
+  padding: 5%;
+  width: 100%;
+}
+
+.intro .summary {
+  color: #612f19;
+  padding: 15% 0;
+}
+
+.intro .preamble {
+  background: #ffe1ec;
+  color: #333;
+  margin-left: -20%;
+  padding: 5% 5% 5% 30%;
+}
+
+.main, .benefits, .explanations, .requirements, .requirements{
+padding: 5%;
+}
+
+.participation{
+  padding: 5%;
+  background: #ffe1ec;
+  color: #333;
+  margin-right: -10.5%;
+}
+
+
+h1 {
+  color: #612f19;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.5em 2em;
+  background-size: cover;
+}
+
+h2 {
+  
+  color: #612f19;
+  font-size: 6em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 5%;
+  border-top: 2px solid $link-hover-color;
+  border-bottom: 2px solid $link-hover-color;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+h3 {
+  //background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
+  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: contain;
+  font-size: 2.25em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+
+p,
+li {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes upAnddown {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+a{
+  animation: upAnddown ease-in-out 3s ease;
+}
+.design-selection {
+  text-align: center;
+  padding: 5px;
+}
+.design-archives {
+  text-align: center;
+  padding: 5px;
+}
+.zen-resources {
+  text-align: center;
+  padding: 5px;
+}
+
+footer {
+  display: block;
+  background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
+  background-repeat: no-repeat;
+  background-position: auto;
+  color: #fff;
+  padding: 1em 5%;
+  width: 100%;
+
+}
+footer a {
+  animation: none;
+  padding: 10px;
+  text-align: center;
+  padding-left: 5%;
+}
+.sidebar {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 224, 235, 1) 86%
+  )
+}
+
+@keyframes bounce{
+  0% {
+   transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+   }
+  40%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(0); 
+  }
+  60%{
+    transform: translateY(-15px); 
+  }
+  80%{
+    transform: translateY(0); 
+  }
+  100%{
+    transform: translateY(0); 
+  }
+}
+
+
+@include breakpoint(large) { 
+  h2 {
+    font-size: 8em;
+  }
+
+  .intro {
+    width: 70%;
+  }
+  .sidebar {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+      circle,
+      rgba(255, 185, 196, 1) 0%,
+      rgba(255, 224, 235, 1) 86%
+    );
+    padding: 5%;
+    margin: 5px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 35%;
+    top: 2.5%;
+    width: 32.75%;
+  }
+  
+
+  .extra1 {
+    //background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+    bottom: 0;
+    right: 0;
+    position: relative;
+    top: 0;
+    width: 30%;
+    z-index: 1;
+  }
+div.summary{
+  width: 60%;
+}
+
+  .explanation {
+    float: left;
+    width: 50%;
+    z-index: 2;
+    margin-top: -10%;
+  }
+
+  .participation {
+    float: left;
+    width: 60%;
+    height: 500px;
+    z-index: 1;
+      padding: 5%;
+      background: #ffe1ec;
+      color: #333;
+      margin-top: -15%;
+      margin-left: -5%;
+  }
+
+  .benefits {
+    float: right;
+    width: 35%;
+    background: #ffe1ec;
+    margin-top: 12%;
+  }
+
+  .requirements {
+    float: left;
+    z-index: 1;
+    background: #ffe1ec;
+    width: 70%;
+    margin-top: -48%;
+  }
+  footer {
+    clear: both;
+    
+    width: 100%;
+  
+  }
+}
+
+/*
 body{
   background: rgb(255,185,196);
   background: linear-gradient(90deg, rgba(255,185,196,1) 0%, rgba(255,225,236,1) 50%, rgba(255,185,196,1) 100%);
@@ -68,10 +343,10 @@ a{
   padding: 50px;
   margin-top: 30px;
   margin-left: 0;
-  border-top:2px solid  $link-hover-color;
-  border-bottom:2px solid  $link-hover-color;
-  border-top-left-radius: 60px;
-  border-bottom-right-radius: 60px;
+ //border-top:2px solid  $link-hover-color;
+  //border-bottom:2px solid  $link-hover-color;
+  //border-top-left-radius: 60px;
+  //border-bottom-right-radius: 60px;
   animation: bounce linear 4s 2s ease-in;
   
 }
@@ -168,23 +443,7 @@ footer a{
     margin-top: 0;
   }
 
-  /*.wrapper {
-    display: grid;
-    gid-template-columns: 500px 300px 500px;
-    justify-content: center;
-    grid-gap: 15px;
-    max-width: 100%;
-    margin-right: auto;
-    margin-bottom: 50px;
-    margin-top: 0;
-    margin-left:auto;
-    border-top:2px solid  $link-hover-color;
-    border-bottom:2px solid  $link-hover-color;
-    padding: 50px;
-    border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    animation: bounce linear 4s 2s infinite;
-  }*/
+  
   .wrapper a{
     animation: none;
   }
@@ -196,16 +455,16 @@ footer a{
     ". . "
     "summary preamble";
     justify-content: center;
-    grid-gap: 15px;
+    grid-gap: 12px;
     max-width: 100%;
     margin-right: auto;
     margin-bottom: 50px;
     margin-top: 0;
     margin-left:auto;
-    border-bottom:2px solid  $link-hover-color;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    padding-bottom: 100px;
+    //border-bottom:2px solid  $link-hover-color;
+    //border-bottom-left-radius: 60px;
+    //border-bottom-right-radius: 60px;
+    padding-bottom: 30px;
 
     //animation: move linear 5s infinite;
     //transform-origin: 50% 50%;
@@ -332,3 +591,4 @@ footer a{
   }
 
 }
+*/
