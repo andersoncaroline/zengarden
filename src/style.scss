@@ -11,6 +11,8 @@ $break-small: 600px;
 $break-medium: 601px;
 $break-large: 801px;
 
+
+
 // breakpoint mixin
 @mixin breakpoint($break) {
   @if $break==small {
@@ -61,13 +63,13 @@ body {
 }
 
 .intro .summary {
-  color: #612f19;
+  color: $title-color;
   padding: 15% 0;
 }
 
 .intro .preamble {
-  background: #ffe1ec;
-  color: #333;
+  background: $background-color;
+  color: $text-color;
   margin-left: -20%;
   padding: 5% 5% 5% 30%;
 }
@@ -78,14 +80,14 @@ padding: 5%;
 
 .participation{
   padding: 5%;
-  background: #ffe1ec;
-  color: #333;
+  background: $background-color;
+  color: $text-color;
   margin-right: -10.5%;
 }
 
 
 h1 {
-  color: #612f19;
+  color: $title-color;
   display: inline-block;
   margin-bottom: 1em;
   padding: 0.5em 2em;
@@ -94,7 +96,7 @@ h1 {
 
 h2 {
   
-  color: #612f19;
+  color: $title-color;
   font-size: 6em;
   font-weight: 900;
   letter-spacing: 1px;
@@ -108,10 +110,12 @@ h2 {
 
 h3 {
   //background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
-  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
-  background-repeat: no-repeat;
-  background-position: auto;
-  background-size: contain;
+  // background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  // background-repeat: no-repeat;
+  // background-position: auto;
+  // background-size: contain;
+  //background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(339, 100%, 94%, 1)'/><path d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z'  stroke-width='1' stroke='none' fill='hsla(336, 58%, 81%, 1)'/><path d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z'  stroke-width='1' stroke='none' fill='hsla(0, 0%, 100%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  border-radius: $border-radius;
   font-size: 2.25em;
   font-weight: 200;
   letter-spacing: 1px;
@@ -178,12 +182,18 @@ a{
 
 footer {
   display: block;
-  background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
-  background-repeat: no-repeat;
-  background-position: auto;
-  color: #fff;
+  // background: rgb(238, 174, 202);
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(255, 185, 196, 1) 0%,
+  //   rgba(255, 224, 235, 1) 86%
+  // );
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(339, 100%, 94%, 1)'/><path d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z'  stroke-width='1' stroke='none' fill='hsla(336, 58%, 81%, 1)'/><path d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z'  stroke-width='1' stroke='none' fill='hsla(0, 0%, 100%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-size: 5%;
   padding: 1em 5%;
   width: 100%;
+  border-radius: $border-radius;
+  text-align: center;
 
 }
 footer a {
@@ -198,7 +208,8 @@ footer a {
     circle,
     rgba(255, 185, 196, 1) 0%,
     rgba(255, 224, 235, 1) 86%
-  )
+  );
+  border-radius: $border-radius;
 }
 
 @keyframes bounce{
@@ -249,6 +260,7 @@ footer a {
     width: 35%;
     top: 2.5%;
     width: 32.75%;
+    border-radius: $border-radius;
   }
   
 
@@ -274,34 +286,43 @@ div.summary{
 
   .participation {
     float: left;
-    width: 60%;
+    width: 55%;
     height: 500px;
     z-index: 1;
-      padding: 5%;
-      background: #ffe1ec;
-      color: #333;
-      margin-top: -15%;
-      margin-left: -5%;
+    padding: 5%;
+    background: $background-color;
+    color: $text-color;
+    margin-top: -10%;
+    margin-left: 0%;
+    border-radius: $border-radius;
+
   }
 
   .benefits {
     float: right;
     width: 35%;
-    background: #ffe1ec;
-    margin-top: 12%;
+    background: $background-color;
+    border-radius: $border-radius;
+    margin-top: 5%;
+    margin-right: -5%;
+    padding: 5%;
+    
   }
 
   .requirements {
     float: left;
     z-index: 1;
-    background: #ffe1ec;
-    width: 70%;
-    margin-top: -48%;
+    background: $background-color;
+    width: 65%;
+    margin-top: 5%;
+    border-radius: $border-radius;
   }
   footer {
     clear: both;
-    
-    width: 100%;
+    padding: 2px;
+    width: 70%;
+    margin-top: 80%;
+    margin-left: 20%;
   
   }
 }
