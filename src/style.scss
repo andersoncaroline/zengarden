@@ -6,39 +6,142 @@
 @import "./atoms/lists";
 @import "./atoms/abbreviations";
 
-//set breakpoint sizes
-$break-small: 600px;
-$break-medium: 601px;
-$break-large: 801px;
-
-
-
-// breakpoint mixin
+$break-small: 1px;
+$break-medium: 550px;
+$break-large: 650px;
+$break-xlarge: 700px;
+$break-xxlarge: 800px;
+$break-xxxlarge: 900px;
+$break-huge: 1500px;
+$break-xhuge: 1800px;
+$break-xxhuge: 2100px;
+$break-xxxhuge: 2500px;
 @mixin breakpoint($break) {
-  @if $break==small {
+  @if $break == small {
     @media (min-width: $break-small) {
       @content;
     }
-  } @else if $break==medium {
-    @media (min-width: $break-medium) and (max-width: 800px) {
+  } @else if $break == medium {
+    @media (min-width: $break-medium) {
       @content;
     }
-  } @else if $break==large {
+  } @else if $break == large {
     @media (min-width: $break-large) {
+      @content;
+    }
+  } @else if $break == xlarge {
+    @media (min-width: $break-xlarge) {
+      @content;
+    }
+  } @else if $break == xxlarge {
+    @media (min-width: $break-xxlarge) {
+      @content;
+    }
+  } @else if $break == xxxlarge {
+    @media (min-width: $break-xxxlarge) {
+      @content;
+    }
+  } @else if $break == huge {
+    @media (min-width: $break-huge) {
+      @content;
+    }
+  } @else if $break == xhuge {
+    @media (min-width: $break-xhuge) {
+      @content;
+    }
+  } @else if $break == xxhuge {
+    @media (min-width: $break-xxhuge) {
+      @content;
+    }
+  } @else if $break == xxxhuge {
+    @media (min-width: $break-xxxhuge) {
       @content;
     }
   }
 }
+
 * {
   margin: 0;
   padding: 0;
+}
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+figure,
+li {
+  position: relative;
+} 
+
+.group:after {
+  display: block;
+  height: 0;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  visibility: hidden;
+}
+* {
   box-sizing: border-box;
 }
-div, article, section, header, footer, nav, figure, li{
-  position: relative;
+
+h1 {
+  color: $title-color;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
 }
-div{
-  display:block
+h2 {
+  color: $title-color;
+  font-weight: 900;
+  font-size: 96px;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 5%;
+  border-top: 2px solid $link-hover-color;
+  border-bottom: 2px solid $link-hover-color;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+h3 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 8px 0 2px 0;
+}
+
+section.intro div.summary p a,
+div.explanation p a,
+div.participation p a {
+  color:$link-color;
+}
+
+
+
+h1,
+section.intro div.summary p,
+div.requirements p:last-child {
+  font-weight: 900;
+text-transform: capitalize;
+}
+
+section.intro div.summary p:last-child,
+div.requirements p:last-child {
+  border-top: 1px solid $link-hover-color;
+  margin-top: 16px;
+  padding-top: 24px;
+}
+
+p,
+li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 0;
 }
 
 body {
@@ -51,86 +154,59 @@ body {
   );
   padding: 5%;
 }
-
 .page-wrapper {
-  position: relative;
   z-index: 2;
 }
 
 .intro {
-  padding: 5%;
-  width: 100%;
+  padding: 3%;
 }
-
 .intro .summary {
-  color: $title-color;
-  padding: 15% 0;
+  color: #fff;
+  padding: 10% 0;
 }
-
 .intro .preamble {
   background: $background-color;
   color: $text-color;
   margin-left: -20%;
   padding: 5% 5% 5% 30%;
 }
-
-.main, .benefits, .explanations, .requirements, .requirements{
-padding: 5%;
-}
-
-.participation{
+.main {
   padding: 5%;
-  background: $background-color;
-  color: $text-color;
-  margin-right: -10.5%;
 }
-
-
-h1 {
-  color: $title-color;
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: 0.5em 2em;
-  background-size: cover;
-}
-
-h2 {
-  
-  color: $title-color;
-  font-size: 6em;
-  font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1em;
-  padding: 5%;
-  border-top: 2px solid $link-hover-color;
-  border-bottom: 2px solid $link-hover-color;
-  border-top-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-}
-
-h3 {
-  //background-image: url("https://img.freepik.com/free-vector/floral-with-cherry-blossoms-full-bloom-pink_8130-710.jpg");
-  // background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
-  // background-repeat: no-repeat;
-  // background-position: auto;
-  // background-size: contain;
-  //background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(339, 100%, 94%, 1)'/><path d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z'  stroke-width='1' stroke='none' fill='hsla(336, 58%, 81%, 1)'/><path d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z'  stroke-width='1' stroke='none' fill='hsla(0, 0%, 100%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+.sidebar {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 224, 235, 1) 86%
+  );
   border-radius: $border-radius;
-  font-size: 2.25em;
-  font-weight: 200;
-  letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  padding: 5%;
+}
+.sidebar ul {
+  padding: 8px 0 32px 0;
+}
+.sidebar ul li {
+  list-style: none;
+  margin:0;
+  padding: 5px 5px 14px 0;
+  background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25px 25px;
 }
 
-p,
-li {
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5em;
-  padding: 0.5em 0;
-}
 
+@keyframes infinite {
+  from {
+    transform: translateX(90px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
+}
 @keyframes slideInLeft {
   from {
     transform: translateX(-300px);
@@ -163,167 +239,203 @@ li {
     transform: translateY(0);
   }
 }
-
-a{
-  animation: upAnddown ease-in-out 3s ease;
-}
-.design-selection {
-  text-align: center;
-  padding: 5px;
-}
-.design-archives {
-  text-align: center;
-  padding: 5px;
-}
-.zen-resources {
-  text-align: center;
-  padding: 5px;
+@keyframes changeShape {
+  0% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 0;
+  }
+  50% {
+    border-radius: 50% 0 0 50%;
+  }
+  75% {
+    border-radius: 0 50% 50% 0;
+  }
+  100% {
+    border-radius: 50%;
+  }
 }
 
 footer {
-  display: block;
-  // background: rgb(238, 174, 202);
-  // background: radial-gradient(
-  //   circle,
-  //   rgba(255, 185, 196, 1) 0%,
-  //   rgba(255, 224, 235, 1) 86%
-  // );
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(339, 100%, 94%, 1)'/><path d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z'  stroke-width='1' stroke='none' fill='hsla(336, 58%, 81%, 1)'/><path d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z'  stroke-width='1' stroke='none' fill='hsla(0, 0%, 100%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   background-size: 5%;
-  padding: 1em 5%;
-  width: 100%;
   border-radius: $border-radius;
   text-align: center;
-
+  clear: both;
+  color:$link-color ;
+  padding: 16px 5%;
+  width: 60%;
 }
 footer a {
-  animation: none;
-  padding: 10px;
   text-align: center;
-  padding-left: 5%;
+  padding: 2px;
 }
-.sidebar {
-  background: rgb(238, 174, 202);
+.design-selection {
+  text-align: right;
+  padding: 15px;
+}
+.design-archives {
+  text-align: right;
+  padding: 15px;
+}
+.zen-resources {
+  text-align: right;
+  padding: 15px;
+}
+
+.explanation {
+  background: rgb(201, 134, 163);
   background: radial-gradient(
     circle,
     rgba(255, 185, 196, 1) 0%,
     rgba(255, 224, 235, 1) 86%
   );
   border-radius: $border-radius;
+  color:$text-color;
+  padding: 5%;
+  margin-top: -5%;
+}
+.participation {
+  background: rgb(201, 134, 163);
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 224, 235, 1) 86%
+  );
+  margin-left: -20%;
+  padding: 5% 5% 5% 30%;
+  color:$background-color ;
+  border-radius: $border-radius;
+  margin-top: 2%;
+
+}
+.benefits {
+  background: rgb(201, 134, 163);
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 224, 235, 1) 86%
+  );
+  border-radius: 50%;
+  padding: 8%;
+  margin-top: 2%;
+  position: relative;
+  text-align: center;
 }
 
-@keyframes bounce{
-  0% {
-   transform: translateY(0);
-  }
-  20% {
-    transform: translateY(0);
-   }
-  40%{
-    transform: translateY(-30px);
-  }
-  50%{
-    transform: translateY(0); 
-  }
-  60%{
-    transform: translateY(-15px); 
-  }
-  80%{
-    transform: translateY(0); 
-  }
-  100%{
-    transform: translateY(0); 
+.requirements {
+  background: rgb(201, 134, 163);
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 196, 1) 0%,
+    rgba(255, 224, 235, 1) 86%
+  );
+  margin-left: -20%;
+  padding: 5% 5% 5% 30%;
+  color:$background-color ;
+  border-radius: $border-radius;
+  margin-top: 2%
+}
+@include breakpoint(small) {
+  body {
+    font-size: 85%;
   }
 }
 
-
-@include breakpoint(large) { 
+@include breakpoint(medium) {
   h2 {
-    font-size: 8em;
+    font-size: 128px;
   }
-
   .intro {
-    width: 70%;
+    width: 66.6%;
   }
   .sidebar {
-    background: rgb(238, 174, 202);
-    background: radial-gradient(
-      circle,
-      rgba(255, 185, 196, 1) 0%,
-      rgba(255, 224, 235, 1) 86%
-    );
-    padding: 5%;
-    margin: 5px;
     position: absolute;
-    top: 10%;
     right: 0;
-    width: 35%;
     top: 2.5%;
     width: 32.75%;
-    border-radius: $border-radius;
+    padding: 2%;
   }
-  
-
   .extra1 {
-    //background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+    background-color: $link-hover-color;
     bottom: 0;
     right: 0;
-    position: relative;
+    position: fixed;
     top: 0;
     width: 30%;
     z-index: 1;
-  }
-div.summary{
-  width: 60%;
-}
-
+    animation: changeShape 5s infinite;
+  } 
   .explanation {
-    float: left;
-    width: 50%;
-    z-index: 2;
-    margin-top: -10%;
+    float: right;
+    width: 45%;
   }
-
   .participation {
     float: left;
-    width: 55%;
-    height: 500px;
-    z-index: 1;
-    padding: 5%;
-    background: $background-color;
-    color: $text-color;
-    margin-top: -10%;
-    margin-left: 0%;
-    border-radius: $border-radius;
-
-  }
-
-  .benefits {
-    float: right;
-    width: 35%;
-    background: $background-color;
-    border-radius: $border-radius;
-    margin-top: 5%;
-    margin-right: -5%;
-    padding: 5%;
+    width: 75%;
     
   }
-
-  .requirements {
-    float: left;
-    z-index: 1;
-    background: $background-color;
-    width: 65%;
+  div.benefits {
+    float: right;
+    width: 35%;
     margin-top: 5%;
-    border-radius: $border-radius;
   }
-  footer {
-    clear: both;
-    padding: 2px;
-    width: 70%;
-    margin-top: 80%;
-    margin-left: 20%;
-  
+  div.requirements {
+    float: left;
+    width: 85%;
+  }
+}
+
+@include breakpoint(large) {
+  .benefits {
+    margin-top: 12%;
+    width: 30%;
+  }
+  .requirements {
+    width: 69%;
+  }
+}
+
+@include breakpoint(xlarge) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@include breakpoint(xxlarge) {
+  body {
+    font-size: 100%;
+  }
+}
+
+@include breakpoint(xxxlarge) {
+  body {
+    font-size: 110%;
+  }
+}
+
+@include breakpoint(huge) {
+  body {
+    font-size: 125%;
+  }
+}
+
+@include breakpoint(xhuge) {
+  body {
+    font-size: 150%;
+  }
+}
+
+@include breakpoint(xxhuge) {
+  body {
+    font-size: 175%;
+  }
+}
+
+@include breakpoint(xxxhuge) {
+  body {
+    font-size: 200%;
   }
 }
 

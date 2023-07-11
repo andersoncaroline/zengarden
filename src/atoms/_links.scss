@@ -6,7 +6,7 @@ a{
         text-decoration: none;
         @include links($link-color);
         font-family: $font-family-droid-sans-serif;
-        animation:upAnddown 
+    
         
     }
     &:visited{
@@ -17,7 +17,8 @@ a{
     }
     &:hover{
         @include links($link-hover-color);
-        transform: translateY(-5px);
+        //transform: translateY(-5px);
+        animation: upAnddown 1s ease-in;
         border-top:2px solid $link-color;
         border-bottom:2px solid $link-color;
         border-radius: 50px;
