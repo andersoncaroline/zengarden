@@ -6,16 +6,8 @@
 @import "./atoms/lists";
 @import "./atoms/abbreviations";
 
-$break-small: 1px;
-$break-medium: 550px;
-$break-large: 650px;
-$break-xlarge: 700px;
-$break-xxlarge: 800px;
-$break-xxxlarge: 900px;
-$break-huge: 1500px;
-$break-xhuge: 1800px;
-$break-xxhuge: 2100px;
-$break-xxxhuge: 2500px;
+
+
 @mixin breakpoint($break) {
   @if $break == small {
     @media (min-width: $break-small) {
@@ -265,7 +257,8 @@ footer {
   clear: both;
   color:$link-color ;
   padding: 16px 5%;
-  width: 60%;
+  width: 80%;
+  margin-left: -15%;
 }
 footer a {
   text-align: center;
@@ -335,7 +328,8 @@ footer a {
   padding: 5% 5% 5% 30%;
   color:$background-color ;
   border-radius: $border-radius;
-  margin-top: 2%
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 @include breakpoint(small) {
   body {
@@ -395,6 +389,7 @@ footer a {
   .requirements {
     width: 69%;
   }
+  
 }
 
 @include breakpoint(xlarge) {

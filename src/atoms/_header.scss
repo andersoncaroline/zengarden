@@ -3,7 +3,7 @@ h1{
     font-size: $size-h1;
     @include links ($title-color);
     font-weight: 1000;
-    animation: infinite 4s ease-in-out infinite alternate;
+    animation: slideInLeft 1s ease-in;
 }
 
 h2{

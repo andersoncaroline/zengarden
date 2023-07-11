@@ -23,6 +23,17 @@ $size-h4: 25px;
 $text:uppercase;
 $border:.5px solid;
 
+$break-small: 1px;
+$break-medium: 550px;
+$break-large: 650px;
+$break-xlarge: 700px;
+$break-xxlarge: 800px;
+$break-xxxlarge: 900px;
+$break-huge: 1500px;
+$break-xhuge: 1800px;
+$break-xxhuge: 2100px;
+$break-xxxhuge: 2500px;
+
 @mixin links ($color){
     color: $color;
 }

@@ -5,7 +5,7 @@ h1 {
   font-size: 50px;
   color: #612F19;
   font-weight: 1000;
-  animation: infinite 4s ease-in-out infinite alternate;
+  animation: slideInLeft 1s ease-in;
 }
 
 h2 {
@@ -281,7 +281,8 @@ footer {
   clear: both;
   color: #730101;
   padding: 16px 5%;
-  width: 60%;
+  width: 80%;
+  margin-left: -15%;
 }
 
 footer a {
@@ -341,6 +342,7 @@ footer a {
   color: #FFE1EC;
   border-radius: 10px;
   margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 @media (min-width: 1px) {
@@ -719,6 +721,4 @@ footer a{
   }
 
 }
-*/
-
-/*# sourceMappingURL=style.css.map */
+*//*# sourceMappingURL=style.css.map */
