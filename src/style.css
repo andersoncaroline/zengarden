@@ -37,6 +37,7 @@ a:link {
   text-decoration: none;
   color: #ea2e49;
   font-family: "Droid Serif", sans-serif;
+  animation: upAnddown;
 }
 a:visited {
   color: #B66754;
