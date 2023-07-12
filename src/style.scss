@@ -85,11 +85,12 @@ h1 {
   display: inline-block;
   margin-bottom: 16px;
   padding: 8px 16px;
+  font-size: 36px;
 }
 h2 {
   color: $title-color;
   font-weight: 900;
-  font-size: 96px;
+  font-size: 76px;
   letter-spacing: 1px;
   line-height: 1em;
   padding: 5%;
@@ -130,7 +131,7 @@ div.requirements p:last-child {
 
 p,
 li {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 24px;
   padding: 8px 0;
@@ -146,6 +147,8 @@ body {
   );
   padding: 5%;
 }
+
+
 .page-wrapper {
   z-index: 2;
 }
@@ -160,8 +163,12 @@ body {
 .intro .preamble {
   background: $background-color;
   color: $text-color;
-  margin-left: -20%;
-  padding: 5% 5% 5% 30%;
+  //margin-left: -20%;
+  //padding: 5% 5% 5% 30%;
+  padding: 15px;
+  border-radius: $border-radius;
+  width: 325px;
+  margin-right: 70px;
 }
 .main {
   padding: 5%;
@@ -178,6 +185,7 @@ body {
 }
 .sidebar ul {
   padding: 8px 0 32px 0;
+  font-size: 11%;
 }
 .sidebar ul li {
   list-style: none;
@@ -256,9 +264,10 @@ footer {
   text-align: center;
   clear: both;
   color:$link-color ;
-  padding: 16px 5%;
-  width: 80%;
-  margin-left: -15%;
+  padding: 18px 5%;
+  width: 100%;
+  margin: 0%;
+  //margin-left: -15%;
 }
 footer a {
   text-align: center;
@@ -296,11 +305,14 @@ footer a {
     rgba(255, 185, 196, 1) 0%,
     rgba(255, 224, 235, 1) 86%
   );
-  margin-left: -20%;
-  padding: 5% 5% 5% 30%;
+  // margin-left: -20%;
+  // padding: 5% 5% 5% 30%;
   color:$background-color ;
   border-radius: $border-radius;
   margin-top: 2%;
+  width: 325px;
+  margin-right: 70px;
+  padding: 15px;
 
 }
 .benefits {
@@ -311,7 +323,7 @@ footer a {
     rgba(255, 224, 235, 1) 86%
   );
   border-radius: 50%;
-  padding: 8%;
+  padding: 9%;
   margin-top: 2%;
   position: relative;
   text-align: center;
@@ -324,12 +336,15 @@ footer a {
     rgba(255, 185, 196, 1) 0%,
     rgba(255, 224, 235, 1) 86%
   );
-  margin-left: -20%;
-  padding: 5% 5% 5% 30%;
+  // margin-left: -20%;
+  // padding: 5% 5% 5% 30%;
   color:$background-color ;
   border-radius: $border-radius;
   margin-top: 2%;
   margin-bottom: 2%;
+  width: 325px;
+  margin-right: 70px;
+  padding: 15px;
 }
 @include breakpoint(small) {
   body {
@@ -339,10 +354,26 @@ footer a {
 
 @include breakpoint(medium) {
   h2 {
-    font-size: 128px;
+    font-size: 75px;
+  }
+  h1{
+    font-size: 34px;
   }
   .intro {
     width: 66.6%;
+  }
+  p, a{
+    font-size: 14px;
+  }
+  .intro .preamble{
+    margin-left: -20%;
+    width: auto;
+    padding: 5% 5% 5% 30%;
+  }
+  .participation{
+    margin-left: -20%;
+    padding: 5% 5% 5% 30%;
+    width: auto;
   }
   .sidebar {
     position: absolute;
@@ -352,6 +383,11 @@ footer a {
     padding: 2%;
   }
   .extra1 {
+    --mask:
+    radial-gradient(47.54px at calc(100% + 27.20px) 50%,#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) calc(50% - 21px + .5px) calc(50% - 68px)/ 42px 136px  ,
+    radial-gradient(47.54px at -27.2px 50%,#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) calc(50% + 21px) 50%/42px 136px  ;
+    -webkit-mask: var(--mask);
+          mask: var(--mask);
     background-color: $link-hover-color;
     bottom: 0;
     right: 0;
@@ -359,10 +395,11 @@ footer a {
     top: 0;
     width: 30%;
     z-index: 1;
-    animation: changeShape 5s infinite;
+    //animation: changeShape 5s infinite;
+
   } 
   .explanation {
-    float: right;
+    float: center;
     width: 45%;
   }
   .participation {
@@ -372,16 +409,30 @@ footer a {
   }
   div.benefits {
     float: right;
-    width: 35%;
+    width: 45%;
     margin-top: 5%;
+    margin-right: -10%;
   }
   div.requirements {
     float: left;
     width: 85%;
+    margin-left: -20%;
+    padding: 5% 5% 5% 30%;
   }
 }
 
 @include breakpoint(large) {
+  h2{ 
+    font-size: 96px;
+  }
+  p, a{
+    font-size: 16px;
+  }
+  .intro .preamble{
+    margin-left: -20%;
+    width: auto;
+    padding: 5% 5% 5% 30%;
+  }
   .benefits {
     margin-top: 12%;
     width: 30%;
@@ -389,12 +440,25 @@ footer a {
   .requirements {
     width: 69%;
   }
-  
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
+  }
+  .sidebar ul li{
+    background-size: 35px 35px;
+  }
+
 }
 
 @include breakpoint(xlarge) {
   body {
     font-size: 90%;
+  }
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
   }
 }
 
@@ -402,11 +466,21 @@ footer a {
   body {
     font-size: 100%;
   }
+  footer{
+    padding: 16px 5%;
+    width: 80%;
+    margin-left: -15%;
+  }
 }
 
 @include breakpoint(xxxlarge) {
   body {
     font-size: 110%;
+  }
+  footer{
+    padding: 16px 5%;
+    width: 80%;
+    margin-left: -15%;
   }
 }
 
@@ -414,11 +488,21 @@ footer a {
   body {
     font-size: 125%;
   }
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
+  }
 }
 
 @include breakpoint(xhuge) {
   body {
     font-size: 150%;
+  }
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
   }
 }
 
@@ -426,11 +510,21 @@ footer a {
   body {
     font-size: 175%;
   }
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
+  }
 }
 
 @include breakpoint(xxxhuge) {
   body {
     font-size: 200%;
+  }
+  footer{
+    margin-left: -15%;
+    padding: 16px 5%;
+    width: 80%;
   }
 }
 
