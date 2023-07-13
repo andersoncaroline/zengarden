@@ -423,11 +423,12 @@ footer a {
   }
   
   .extra1 {
-    --mask:
+    /*--mask:
     radial-gradient(47.54px at calc(100% + 27.20px) 50%,#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) calc(50% - 21px + .5px) calc(50% - 68px)/ 42px 136px  ,
     radial-gradient(47.54px at -27.2px 50%,#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) calc(50% + 21px) 50%/42px 136px  ;
     -webkit-mask: var(--mask);
-          mask: var(--mask);
+          mask: var(--mask);*/
+          
     margin-right: 3%;
     bottom: 0;
     right: 0;
@@ -439,10 +440,13 @@ footer a {
   
   }
   .extra2 {
-    background-color:$link-active-color;
+    background-image: url("https://em-content.zobj.net/thumbs/120/softbank/145/cherry-blossom_1f338.png");
+    //background-color:$link-active-color;
     bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     right: 0;
-    border-radius: 50%;
+    
     position: fixed;
     height:40%;
     top: 70%;
