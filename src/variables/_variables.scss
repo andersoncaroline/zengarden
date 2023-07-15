@@ -23,12 +23,9 @@ $size-h4: 25px;
 $text:uppercase;
 $border:.5px solid;
 
-$break-small: 1px;
-$break-medium: 550px;
-$break-large: 650px;
-$break-xlarge: 700px;
-$break-xxlarge: 800px;
-$break-xxxlarge: 900px;
+$break-medium: 660px;
+$break-large: 1420px;
+
 
 @mixin links ($color){
     color: $color;
