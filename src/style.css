@@ -413,13 +413,19 @@ header {
     background-repeat: repeat;
     background-size: 300px;
   }
+  .sidebar ul li {
+    background-size: 35px;
+  }
 }
-@media (min-width: 1420px) {
+@media (min-width: 1578px) {
   h2 {
     font-size: 86px;
   }
   p, a {
     font-size: 16px;
+  }
+  .sidebar ul li {
+    background-size: 35px;
   }
   .intro {
     width: 80%;
