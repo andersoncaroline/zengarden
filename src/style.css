@@ -231,6 +231,7 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   background-size: 25px 25px;
+  border-bottom: 1px solid #B66754;
 }
 
 @keyframes slideInLeft {
@@ -417,7 +418,7 @@ header {
     background-size: 35px;
   }
 }
-@media (min-width: 1578px) {
+@media (min-width: 1200px) {
   h2 {
     font-size: 86px;
   }
@@ -495,4 +496,6 @@ header {
     padding: 16px 5%;
     width: 60%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
